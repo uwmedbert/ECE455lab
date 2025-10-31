@@ -9,6 +9,6 @@ cd $SLURM_SUBMIT_DIR
 module load gcc
 
 # Adjust the include path below to point to your Taskflow installation
-g++ -std=c++20 static_tasking.cpp -o static_tasking -I/path/to/taskflow/ -pthread
+g++ -std=c++20 static_tasking.cpp -o static_tasking -I/srv/home/eang2/ECE455lab/lab8/taskflow/ -pthread
 
 ./static_tasking
