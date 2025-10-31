@@ -8,6 +8,6 @@
 cd $SLURM_SUBMIT_DIR
 module load gcc
 
-g++ -std=c++20 dependent_async.cpp -o dependent_async -I/srv/home/eang2/ECE455lab/lab8/taskflow/ -pthread
+g++ -std=c++17 dependent_async.cpp -o dependent_async -I/srv/home/eang2/ECE455lab/lab8/taskflow/ -pthread
 
 ./dependent_async

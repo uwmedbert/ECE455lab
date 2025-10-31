@@ -8,6 +8,6 @@
 cd $SLURM_SUBMIT_DIR
 module load gcc
 
-g++ -std=c++20 condition_task.cpp -o condition_task -I/srv/home/eang2/ECE455lab/lab8/taskflow/ -pthread
+g++ -std=c++17 condition_task.cpp -o condition_task -I/srv/home/eang2/ECE455lab/lab8/taskflow/ -pthread
 
 ./condition_task
