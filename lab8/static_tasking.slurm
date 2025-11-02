@@ -7,10 +7,8 @@
 
 cd $SLURM_SUBMIT_DIR
 
-# FIX: Loading the specific version found: gcc 7.5.0
-module load gcc/7.5.0
+module load gnu/7.5.0
 
-# The compilation command is correct for your Taskflow path
 g++ -std=c++17 -O3 -I/srv/home/eang2/ECE455lab/lab8/taskflow static_tasking.cpp -o static_tasking -pthread
 
 ./static_tasking
