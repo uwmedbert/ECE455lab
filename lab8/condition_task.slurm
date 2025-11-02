@@ -7,15 +7,18 @@
 
 cd $SLURM_SUBMIT_DIR
 
-# Use the newest compatible compiler for Euler Generation 8
+# Ensure a clean environment and use the Gen8-compatible compiler
 module purge
-module load gcc/14.3.0
+module load gcc/suse/14
 
-# Compile the Taskflow program
+# Show compiler version (for confirmation in output file)
+gcc --version
+
+# Compile Taskflow example
 g++ condition_task.cpp \
     -std=c++17 -O2 -pthread \
     -I/srv/home/eang2/ECE455lab/lab8/taskflow/taskflow \
     -o condition_task
 
-# Run the executable
+# Run the compiled binary
 ./condition_task
