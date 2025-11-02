@@ -6,9 +6,11 @@
 #SBATCH --output=static_tasking.output
 
 cd $SLURM_SUBMIT_DIR
-module load gcc
 
-# Adjust the include path below to point to your Taskflow installation
+# FIX: Loading the specific version found: gcc 7.5.0
+module load gcc/7.5.0
+
+# The compilation command is correct for your Taskflow path
 g++ -std=c++17 -O3 -I/srv/home/eang2/ECE455lab/lab8/taskflow static_tasking.cpp -o static_tasking -pthread
 
 ./static_tasking
