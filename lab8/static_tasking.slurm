@@ -9,6 +9,6 @@ cd $SLURM_SUBMIT_DIR
 
 module load gcc/14.3.0
 
-g++ -std=c++17 -O3 static_tasking.cpp -pthread -I taskflow -o static_tasking
+g++ -std=c++17 -O3 dependent_async.cpp -pthread -I /srv/home/eang2/ECE455lab/lab8/taskflow/taskflow -o static_tasking
 
 ./static_tasking
