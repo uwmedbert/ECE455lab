@@ -7,8 +7,8 @@
 
 cd $SLURM_SUBMIT_DIR
 
-module load gnu/7.5.0
+module load gcc/14.3.0
 
-g++ -std=c++17 -O3 -I/srv/home/eang2/ECE455lab/lab8/taskflow static_tasking.cpp -o static_tasking -pthread
+g++ -std=c++17 -O3 -pthread -I taskflow -o dependent_async
 
 ./static_tasking
